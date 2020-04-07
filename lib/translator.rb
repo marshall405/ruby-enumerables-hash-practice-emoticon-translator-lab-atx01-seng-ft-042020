@@ -19,7 +19,7 @@ def get_japanese_emoticon(file_path, emoticon)
   emoticons = load_library(file_path)
   
   emoticons.each do |outer_key, emoticon_hash|
-    inner_hash.each do |inner_key, inner_emoticon|
+    emoticon_hash.each do |inner_key, inner_emoticon|
       if inner_emoticon == emoticon
         return emoticons[outer_key][:japanese]
       end
