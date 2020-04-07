@@ -7,7 +7,7 @@ def load_library(file_path)
   YAML.load_file(file_path).each do |key,value|
     new_hash[key] = {
       :english => value[0],
-      :japenese => value[1]
+      :japanese => value[1]
     }
   end
   new_hash
