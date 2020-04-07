@@ -10,11 +10,17 @@ def load_library(file_path)
       :japanese => value[1]
     }
   end
+  puts new_hash
   new_hash
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(file_path, emoticon)
   # code goes here
+  hash = load_library(file_path)
+  
+  hash.each do |key, value|
+    
+  end
 end
 
 def get_english_meaning
