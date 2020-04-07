@@ -3,7 +3,14 @@ require "yaml"
 
 def load_library(file_path)
   # code goes here
-  puts YAML.load_file(file_path)
+  new_hash = {}
+  YAML.load_file(file_path).each do |key,value|
+    new_hash[key] = {
+      :english => value[0],
+      :japenese => value[1]
+    }
+  end
+  new_hash
 end
 
 def get_japanese_emoticon
